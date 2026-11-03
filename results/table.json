@@ -1,0 +1,18 @@
+{
+  "format": "integer-alias-v1",
+  "weights": [
+    "1",
+    "2",
+    "3"
+  ],
+  "cutoffs": [
+    "3",
+    "6",
+    "6"
+  ],
+  "aliases": [
+    2,
+    1,
+    2
+  ]
+}

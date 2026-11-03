@@ -1,0 +1,128 @@
+{
+  "data": "Synthetic integer weights; deterministic enumerations and a seed-731 smoke sample.",
+  "modulo_example": {
+    "weights": [
+      1,
+      2,
+      3
+    ],
+    "bits": 5,
+    "intended": [
+      "1/6",
+      "1/3",
+      "1/2"
+    ],
+    "modulo": [
+      "3/16",
+      "3/8",
+      "7/16"
+    ],
+    "rejection_given_acceptance": [
+      "1/6",
+      "1/3",
+      "1/2"
+    ],
+    "acceptance_probability": "9/16",
+    "expected_attempts_without_cap": "16/9",
+    "total_variation_modulo": "1/16"
+  },
+  "rare_support_example": {
+    "weights": [
+      "1152921504606846976",
+      "1",
+      "1"
+    ],
+    "probabilities": [
+      "576460752303423488/576460752303423489",
+      "1/1152921504606846978",
+      "1/1152921504606846978"
+    ],
+    "cell_counts": [
+      "3458764513820540928",
+      "3",
+      "3"
+    ],
+    "float_cdf": [
+      "1.152921504606847e+18",
+      "1.152921504606847e+18",
+      "1.152921504606847e+18"
+    ],
+    "float_cdf_increment_widths": [
+      "1.152921504606847e+18",
+      "0.0",
+      "0.0"
+    ],
+    "rare_output_tickets": [
+      "1152921504606846978",
+      "2305843009213693956"
+    ],
+    "intended_rare_probability": "1/576460752303423489",
+    "expected_draws_until_either_rare_under_iid": "576460752303423489"
+  },
+  "cost_diagnostics": [
+    {
+      "n": 16,
+      "queries": 1024,
+      "cdf_mean_comparisons": 4.08203125,
+      "cdf_max_comparisons": 5,
+      "alias_cutoff_comparisons_per_decode": 1,
+      "cdf_bits_per_attempt": 10,
+      "alias_bits_per_attempt": 14,
+      "cdf_expected_bits_without_cap": "640/47",
+      "alias_expected_bits_without_cap": "896/47"
+    },
+    {
+      "n": 64,
+      "queries": 1024,
+      "cdf_mean_comparisons": 6.0205078125,
+      "cdf_max_comparisons": 7,
+      "alias_cutoff_comparisons_per_decode": 1,
+      "cdf_bits_per_attempt": 12,
+      "alias_bits_per_attempt": 18,
+      "cdf_expected_bits_without_cap": "49152/3095",
+      "alias_expected_bits_without_cap": "73728/3095"
+    },
+    {
+      "n": 256,
+      "queries": 1024,
+      "cdf_mean_comparisons": 8.0048828125,
+      "cdf_max_comparisons": 9,
+      "alias_cutoff_comparisons_per_decode": 1,
+      "cdf_bits_per_attempt": 14,
+      "alias_bits_per_attempt": 22,
+      "cdf_expected_bits_without_cap": "229376/12511",
+      "alias_expected_bits_without_cap": "360448/12511"
+    },
+    {
+      "n": 1024,
+      "queries": 1024,
+      "cdf_mean_comparisons": 10.001953125,
+      "cdf_max_comparisons": 11,
+      "alias_cutoff_comparisons_per_decode": 1,
+      "cdf_bits_per_attempt": 16,
+      "alias_bits_per_attempt": 26,
+      "cdf_expected_bits_without_cap": "131072/6275",
+      "alias_expected_bits_without_cap": "212992/6275"
+    },
+    {
+      "n": 4096,
+      "queries": 1024,
+      "cdf_mean_comparisons": 12.0009765625,
+      "cdf_max_comparisons": 13,
+      "alias_cutoff_comparisons_per_decode": 1,
+      "cdf_bits_per_attempt": 18,
+      "alias_bits_per_attempt": 30,
+      "cdf_expected_bits_without_cap": "4718592/200677",
+      "alias_expected_bits_without_cap": "7864320/200677"
+    }
+  ],
+  "smoke_sample": {
+    "seed": 731,
+    "draws": 10000,
+    "counts": [
+      1695,
+      3285,
+      5020
+    ]
+  }
+}

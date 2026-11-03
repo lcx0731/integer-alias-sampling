@@ -1,0 +1,23 @@
+name: tests-and-demo
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -r requirements-repro.txt
+      - run: python -m pip install --no-deps .
+      - run: python -m pip check
+      - run: python -m pytest -q
+      - run: python -m integer_alias.demo --output /tmp/integer-alias-demo
+      - run: integer-alias audit /tmp/integer-alias-demo/rare-table.json
+      - run: integer-alias sample /tmp/integer-alias-demo/table.json --count 10000 --seed 731
